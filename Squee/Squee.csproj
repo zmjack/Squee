@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <Version>0.0.1</Version>
+    <Authors>zmjack</Authors>
+    <Company>linqsharp.net</Company>
+    <Description>Built for full-stack development.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/zmjack/Squee</PackageProjectUrl>
+    <Copyright>Copyright © linqsharp.net 2023</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/zmjack/Squee</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageId>Squee</PackageId>
+    <PackageTags>Frontend Json</PackageTags>
+    <RootNamespace>Squee</RootNamespace>
+    <AssemblyName>Squee</AssemblyName>
+    <LangVersion>preview</LangVersion>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExcelSharp.NPOI" Version="0.4.5" />
+    <PackageReference Include="LinqSharp" Version="7.0.35" />
+    <PackageReference Include="LinqSharp.EFCore.Core" Version="0.0.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+    <PackageReference Include="NStandard" Version="0.56.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
