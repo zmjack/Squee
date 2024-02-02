@@ -22,7 +22,7 @@ public abstract class ProTableController<TSource, TResult> : Controller
         var source = Filter(dict);
         if (current > 0 && pageSize > 0)
         {
-            source = source.Page(current, pageSize);
+            //source = source.Page(current, pageSize);
         }
 
         var result = Select(source);

@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace Squee.Antd;
+namespace Squee;
 
 public static class DbSetExtensions
 {
+    [Obsolete("Not recommanded.", false)]
     public static void ForceUpdate<TMain, TMainKey, TSub, TSubKey>(this DbSet<TMain> @this, DbSet<TSub> subSet, Func<TMain, TMainKey> mainKeySelector, Expression<Func<TSub, TSubKey>> subKeySelector, Expression<Func<TSub, TMainKey>> rootSelector, TMain model, Func<TMain, IEnumerable<TSub>> subsSelector)
         where TMain : class
         where TSub : class

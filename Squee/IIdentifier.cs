@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Squee.Antd.Pro;
+namespace Squee;
 
 public interface IIdentifier
 {
@@ -14,7 +14,7 @@ public interface IIdentifier<TSelf> : IIdentifier
     static abstract IQueryable<TSelf> QueryChain(DbSet<TSelf> dbSet);
 }
 
-internal class IIdentifierNamer : IIdentifier<IIdentifierNamer>
+public class IIdentifierNamer : IIdentifier<IIdentifierNamer>
 {
     public Guid Id => throw new NotImplementedException();
     public string? Name => throw new NotImplementedException();

@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Squee.Antd;
+namespace Squee;
 
 public static class IQueryableExtensions
 {

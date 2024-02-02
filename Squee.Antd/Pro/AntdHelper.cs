@@ -106,8 +106,9 @@ public class AntdHelper<TContext>(TContext context)
                     });
                     queryable = queyrChain!.Invoke(null, [dbSet])!;
                 }
-                var asNoTracking = _method_AsNoTracking.MakeGenericMethod(targetType);
-                queryable = asNoTracking.Invoke(null, [queryable])!;
+                //TODO: 不跟踪无法进行外部缓存
+                //var asNoTracking = _method_AsNoTracking.MakeGenericMethod(targetType);
+                //queryable = asNoTracking.Invoke(null, [queryable])!;
 
                 var identifiers = _method_ToArray.MakeGenericMethod(targetType).Invoke(null, [queryable]) as IIdentifier[];
 
