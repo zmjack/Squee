@@ -1,5 +1,6 @@
 ﻿namespace Squee.Antd.Pro;
 
+[Obsolete("不再使用", false)]
 public class StepsBuilder<TContext>(TContext context)
 {
     public StepsForm Build<T>(string title, T? entity, Func<PropSelector<TContext, T>, IStep[]> selector)

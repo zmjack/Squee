@@ -1,6 +1,4 @@
-﻿using Mung;
-
-namespace Squee.MungForm;
+﻿namespace Squee.MungForm;
 
 public abstract class MungFormInput
 {

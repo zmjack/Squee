@@ -2,6 +2,7 @@
 
 namespace Squee.Antd.Pro;
 
+[Obsolete("不再使用")]
 public interface IStepsForm
 {
     string Title { get; }
