@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mung" Version="0.0.3" />
+    <PackageReference Include="Spread" Version="0.0.1" />
   </ItemGroup>
 
   <ItemGroup>
