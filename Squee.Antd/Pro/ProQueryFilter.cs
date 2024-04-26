@@ -17,19 +17,24 @@ public class ProQueryFilter<T> : IQueryFilter<T>
                 var prop = props.FirstOrDefault(p => StringEx.CamelCase(p.Name) == rule.Key);
                 if (prop is not null)
                 {
-                    if (prop.PropertyType == typeof(Guid))
-                    {
-                        var value = Guid.Parse(rule.Value);
-                        exp &= h.Property(prop.Name) == value;
-                    }
-                    else if (prop.PropertyType == typeof(string))
+                    if (prop.PropertyType == typeof(string))
                     {
                         var value = rule.Value;
                         exp &= h.Property(prop.Name).Contains(value);
                     }
-                    else if (prop.PropertyType == typeof(DateOnly))
+                    else if (new[] { typeof(Guid), typeof(Guid?) }.Contains(prop.PropertyType))
+                    {
+                        var value = Guid.Parse(rule.Value);
+                        exp &= h.Property(prop.Name) == value;
+                    }
+                    else if (new[] { typeof(DateOnly), typeof(DateOnly?) }.Contains(prop.PropertyType))
                     {
                         var value = DateOnly.Parse(rule.Value);
+                        exp &= h.Property(prop.Name) == value;
+                    }
+                    else if (new[] { typeof(DateTime), typeof(DateTime?) }.Contains(prop.PropertyType))
+                    {
+                        var value = DateTime.Parse(rule.Value);
                         exp &= h.Property(prop.Name) == value;
                     }
                 }

@@ -2,7 +2,7 @@
 
 namespace Squee.Antd.Pro;
 
-[Obsolete("不再使用")]
+[Obsolete("不再使用", true)]
 public interface IStepsForm
 {
     string Title { get; }
@@ -10,6 +10,7 @@ public interface IStepsForm
     IStep[] Steps { get; }
 }
 
+[Obsolete("不再使用", true)]
 public class StepsForm(string title, object? entity) : IStepsForm, IEnumerable<IStep>
 {
     public string Title { get; set; } = title;
