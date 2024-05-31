@@ -2,6 +2,7 @@
 
 namespace Squee.Antd.Controllers;
 
+[Obsolete("")]
 public abstract class ProTableController<TSource, TResult> : Controller
 {
     protected abstract IEnumerable<TSource> Filter(Dictionary<string, string> filter);
