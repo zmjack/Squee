@@ -25,12 +25,12 @@
 
   <ItemGroup>
     <PackageReference Include="LinqSharp" Version="7.0.40" />
-    <PackageReference Include="LinqSharp.EFCore.Core" Version="0.0.21" />
+    <PackageReference Include="LinqSharp.EFCore.Core" Version="0.0.22" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
-    <PackageReference Include="NStandard" Version="0.64.6" />
-    <PackageReference Include="Spread" Version="0.0.9.3" />
+    <PackageReference Include="NStandard" Version="0.70.0" />
+    <PackageReference Include="Spread" Version="0.0.10" />
   </ItemGroup>
 
   <ItemGroup>
